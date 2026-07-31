@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mrm_template_audit"
+version = "0.0.1"
+authors = [
+  { name="Model Risk Geek", email="datascienceassignmentsolution@gmail.com" },
+]
+description = "A custom model risk management utility library"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pandas>=2.0.0",
+    "scikit-learn>=1.2.0",
+	"python-docx",
+	"reportlab",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/data-science-geek86/mrm_template_audit"

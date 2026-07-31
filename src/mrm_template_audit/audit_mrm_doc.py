@@ -465,6 +465,10 @@ def audit_model_document(model_path, template_path):
     audit_report["doc_literal_toc"] = filtered_literal_toc
     audit_report["template_structure"] = filtered_template_structure
     audit_report["body_headings"] = body_headings
+    
+    # Audited File and template File Details
+    audit_report["audited_file_name"] = model_path
+    audit_report["template_file_name"] = template_path
 
     return audit_report
 

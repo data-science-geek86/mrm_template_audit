@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: mrm_template_audit
+Version: 0.0.1
+Summary: A custom model risk management utility library
+Author-email: Model Risk Geek <datascienceassignmentsolution@gmail.com>
+Project-URL: Homepage, https://github.com/data-science-geek86/mrm_template_audit
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas>=2.0.0
+Requires-Dist: scikit-learn>=1.2.0
+Requires-Dist: python-docx
+Requires-Dist: reportlab

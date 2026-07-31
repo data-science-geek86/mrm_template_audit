@@ -108,7 +108,11 @@ def get_corporate_styles():
     return styles
 
 
-def generate_audit_pdf_report(audit_results, model_filename, template_filename, output_filename):
+def generate_audit_pdf_report(
+                                audit_results, 
+                                #model_filename, 
+                                #template_filename, 
+                                output_filename):
     """
     Generates a professional, visually appealing PDF business report explaining audit findings.
     
@@ -117,8 +121,8 @@ def generate_audit_pdf_report(audit_results, model_filename, template_filename, 
 
     Args:
         audit_results (dict): The dictionary output from audit_model_document.
-        model_filename (str): The filename of the model document audited.
-        template_filename (str): The filename of the template used as reference.
+        #model_filename (str): The filename of the model document audited.
+        #template_filename (str): The filename of the template used as reference.
         output_filename (str): The desired path/filename for the generated PDF.
     """
     
@@ -135,12 +139,14 @@ def generate_audit_pdf_report(audit_results, model_filename, template_filename, 
     # =========================================================================
     # --- REPORT HEADER (Branding) ---
     # =========================================================================
+    model_filename = audit_results["audited_file_name"]
+    template_filename = audit_results["template_file_name"]
     story.append(Paragraph("DOCUMENT AUDIT REPORT", styles['CorporateTitle']))
     story.append(Paragraph(f"Model: {model_filename}<br/>Template: {template_filename}", styles['CorporateSubtitle']))
     
     # Reference Information Table (Branded style)
     ref_data = [
-        [Paragraph("<b>Audit ID:</b>", styles['CorporateBody']), Paragraph(f"AUDIT-{datetime.now().strftime('%Y%m%d')}", styles['CorporateBody'])],
+        [Paragraph("<b>Audit ID:</b>", styles['CorporateBody']), Paragraph(f"AUDIT-{datetime.now().strftime('%Y%m%d %H%M%S')}", styles['CorporateBody'])],
         [Paragraph("<b>Report Generated:</b>", styles['CorporateBody']), Paragraph(f"{generation_date}", styles['CorporateBody'])],
         [Paragraph("<b>Analysis Basis:</b>", styles['CorporateBody']), Paragraph("WordprocessingML Structure, Headings & Numbering Resolution", styles['CorporateBody'])]
     ]
