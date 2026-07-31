@@ -1,6 +1,7 @@
-# Function Documentation: `generate_audit_pdf_report`
+# MRM Documentation Audit
 
-The `generate_audit_pdf_report` function generates a formatted, corporate-branded PDF document summarizing the results of an automated Model Risk Management (MRM) document audit.
+The package is designed to audit the compliance of the development/validation documentation with prescribed standard templates (development or validation). 
+Acceptable file format is MS Word file. It generates a formatted, corporate-branded PDF document summarizing the results of an automated Model Risk Management (MRM) document audit.
 
 ---
 
