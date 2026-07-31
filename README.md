@@ -59,7 +59,7 @@ def generate_audit_pdf_report(audit_results: dict, output_filename: str) -> None
         output_filename (str): The desired path/filename for the generated PDF.
     """
 	
-```
+
 
 The audit_results parameter expects the following schema:
 {
@@ -117,7 +117,7 @@ The audit_results parameter expects the following schema:
 │  [PAGE BREAK]                                 │
 │  Audit Notes & Disclaimers                    │
 └───────────────────────────────────────────────┘
-
+```
 
 ```python
 
