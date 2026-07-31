@@ -19,7 +19,7 @@ The `generate_audit_pdf_report` function generates a formatted, corporate-brande
 This function converts structured output dictionary data from an XML/WordprocessingML document audit into a ReportLab PDF document.
 
 ### Features
-* **Branded Report Header:** Dynamic generation date, audit ID, and file references.
+* **Standardized Report Header:** Dynamic generation date, audit ID, and file references.
 * **Executive Summary:** High-level audit status (`COMPLIANT` vs `ATTENTION REQUIRED`).
 * **Internal Integrity (TOC Sync):** Tabulated comparison of Table of Contents vs. actual body headings.
 * **Template Compliance & Structure:** Categorized analysis for missing mandatory sections, incorrect section numbering, and extra non-standard sections.
@@ -34,7 +34,7 @@ from mrm_template_audit.audit_mrm_doc import audit_model_document
 from mrm_template_audit.generate_audit_pdf_report import generate_audit_pdf_report
 
 # --- 1. Define your file paths ---
-# (Here, we assume the template file and model document is stored undertest folder)
+# (Here, we assume the template file and model document is stored under test folder)
 MODEL_DOC = './test/MDD_Submission_v2 - TOC.docx'
 TEMPLATE_DOC = './test/2_MDD_Template_TOC_NoManual_Section_Number.docx'
 
@@ -63,7 +63,7 @@ generate_audit_pdf_report(
 
 ## Function Signature 
 
-### audit_model_document
+### A) audit_model_document
 
 ```python
 def audit_model_document(model_path, template_path):
@@ -74,12 +74,12 @@ def audit_model_document(model_path, template_path):
     and extra non-standard sections (model vs template).
 	
 	Args:
-        model_path (str): Path of the model development/validation documenation file (MS Word file format) (including file name).
-        template_path (str): Path of the model development/validation template (including file name).
+        model_path (str): Path of the model development/validation documenation file (MS Word file format) including file name.
+        template_path (str): Path of the model development/validation template (MS Word file format) including file name.
     """
 ```
 
-### generate_audit_pdf_report
+### B) generate_audit_pdf_report
 
 ```python
 def generate_audit_pdf_report(audit_results: dict, output_filename: str) -> None
