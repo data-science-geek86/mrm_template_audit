@@ -3,7 +3,7 @@
 # MRM Documentation Audit
 
 The package is designed to audit the compliance of the development/validation documentation with prescribed standard templates (development or validation). 
-Acceptable file format is MS Word file. It generates a formatted, corporate-branded PDF document summarizing the results of an automated Model Risk Management (MRM) document audit.
+Acceptable file format is MS Word file. It generates a well-formatted PDF document summarizing the results of an automated Model Risk Management (MRM) document audit.
 
 ---
 
@@ -88,7 +88,7 @@ def audit_model_document(model_path, template_path):
 def generate_audit_pdf_report(audit_results: dict, output_filename: str) -> None
 
     """
-    Generates a professional, visually appealing PDF business report explaining audit findings.
+    Generates a professional PDF report explaining audit findings.
     
     This function structures findings (internal discrepancies, template compliance gaps, 
     and successful alignments) into a branded PDF format with corporate styling.
